@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
+    <script src="visualizer.js"></script>
+    <script src="mergeSortVisualizer.js"> </script>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="my-navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand h1 mr-3" href="#">AB - Sorting Visualizer</a>
+            <div class="button-group">
+                <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+                    <div class="btn-group mr-2" role="group" aria-label="First group">
+                        <button onclick="genereateArray()" type="button" class="btn btn-secondary">Generate New
+                            Array</button>
+                    </div>
+                    <div class="btn-group mr-2" role="group" aria-label="Second group">
+                        <button onclick="doQuickSort()" type="button" class="btn btn-secondary">Quick Sort</button>
+                        <button onclick="doSelectionSort()" type="button" class="btn btn-secondary">Selection Sort</button>
+                        <button onclick="doBubbleSort()" type="button" class="btn btn-secondary">Bubble Sort</button>
+                    </div>
+                    <div>
+                        <button onclick="setSpeed()" type="button" class="btn btn-secondary ml-2">set speed</button>
+                    </div>
+                </div>
+            </div>
+            <input id="speedValue" type="number" class="form-control" placeholder="time in ms" value="50" min="10"
+                max="100">
+
+            <!-- <div id="chooseSpeed">
+                <input type="number" class="form-control" placeholder="time in ms" value="10" min="1" max="100">
+                <button class="btn btn-default" onclick="setSpeed()">set sorting speed</button>
+                <h3></h3>
+            </div> -->
+        </nav>
+    </div>
+
+
+
+
+    <!-- <button id="my-btn">generate random array</button>
+    <button id="sortBtn">sort</button> -->
+
+    <!-- Bootstrap scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

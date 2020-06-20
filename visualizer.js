@@ -106,16 +106,24 @@ async function bubbleSort(unsorted) {
 //End Bubble Sort
 
 //Selection sort
-function selectionSort(unsorted) {
+async function selectionSort(unsorted) {
     for (let i = 0; i < unsorted.length; i++) {
-        var minIndex = i;
-        for (let j = i+1; j < unsorted.length; j++) {
-            if (unsorted[j] < unsorted[minIndex]) {
-                minIndex = j;
+        states[i] = 1;
+    }
+    for (var i = 0; i < unsorted.length; i++) {
+        //set min to the current iteration of i
+        var min = i;
+        for (var j = i; j < unsorted.length; j++) {
+            if (unsorted[j] < unsorted[min]) {
+                min = j;
             }
         }
-        if (i!= minIndex) {
-            swap(unsorted, i, minIndex);
+        if (i != min) {
+            states[i] = 0;
+            states[min] = 0;
+            await swap(unsorted, i, min);
+            states[i] = -1;
+            states[min] = -1;
         }
     }
 }
@@ -137,4 +145,6 @@ function draw() {
     }
 
 }
+
+
 
